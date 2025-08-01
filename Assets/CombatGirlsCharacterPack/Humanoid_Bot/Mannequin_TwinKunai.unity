@@ -683,6 +683,7 @@ MonoBehaviour:
     - PUT
     - WALK
     - RUN
+    - SPRINT
     - ATTACK1
     - ATTACK2
     - ATTACK3
