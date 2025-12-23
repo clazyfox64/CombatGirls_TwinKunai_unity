@@ -30,7 +30,80 @@ using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
 
-public class BiperworksPrefabReplace : EditorWindow
+namespace Biperworks.Tools.PrefabReplace
+{
+    [Serializable]
+    public class BonItem
+    {
+        public bool selected = true;
+        public string pathInB;
+        public string parentPathInB;
+        public int depth;
+        public bool isBlacklisted;
+        public bool existsInA; // New field for Hide Transferred feature
+    }
+
+    [Serializable]
+    public class MeshItem
+    {
+        public bool selected = false;
+        public string pathInB; // relative to loadedRootB
+        public SkinnedMeshRenderer smrB;
+        public MeshRenderer mrB;
+
+        public string meshName;
+        public int materialCount;
+        public int boneCount;
+        public string rootBoneName;
+
+        public int missingBonesInA;
+        public bool hasProblems;
+
+        public string problemText;
+        public bool existsInA;
+        public bool isEmptyGO; // True if this is an Empty GameObject (no renderers)
+        public bool isUnderRig; // True if this object is under Rig Root
+    }
+
+    public enum CompCategory
+    {
+        Transform,
+        Renderer,
+        Collider,
+        Script,
+        Physics,
+        Audio,
+        Light,
+        Other
+    }
+
+    public enum CompSource
+    {
+        Mesh,
+        Bone
+    }
+
+    [Serializable]
+    public class CompItem
+    {
+        public bool selected = false;
+        public bool locked = false;
+        public CompCategory category;
+        public CompSource source; // New field for Source Filter
+        public string pathInB;
+        public string compTypeName;
+        public Component compB;
+
+        public bool isMissingScript;
+
+        public int externalRefCount;
+        public int nullRefCount;
+
+        public string notes;
+        public bool existsInA; // New field for Hide Transferred feature
+    }
+
+    public class BiperworksPrefabReplace : EditorWindow
 {
     [MenuItem("Tools/Biperworks Tool/Biperworks-Prefab Replace")]
     public static void Open() => GetWindow<BiperworksPrefabReplace>("Biperworks-Prefab Replace");
@@ -64,19 +137,7 @@ public class BiperworksPrefabReplace : EditorWindow
     // =========================
     // Step 1: Bones
     // =========================
-    [Serializable]
-
-    private class BoneItem
-    {
-        public bool selected = true;
-        public string pathInB;
-        public string parentPathInB;
-        public int depth;
-        public bool isBlacklisted;
-        public bool existsInA; // New field for Hide Transferred feature
-    }
-
-    [SerializeField] private List<BoneItem> boneItems = new();
+    [SerializeField] private List<BonItem> boneItems = new();
 
     [SerializeField] private string boneSearch = "";
     [SerializeField] private bool showOnlySelectedBones = false;
@@ -93,28 +154,6 @@ public class BiperworksPrefabReplace : EditorWindow
     // =========================
     // Step 2: Meshes
     // =========================
-    [Serializable]
-    private class MeshItem
-    {
-        public bool selected = false;
-        public string pathInB; // relative to loadedRootB
-        public SkinnedMeshRenderer smrB;
-        public MeshRenderer mrB;
-
-        public string meshName;
-        public int materialCount;
-        public int boneCount;
-        public string rootBoneName;
-
-        public int missingBonesInA;
-        public bool hasProblems;
-
-        public string problemText;
-        public bool existsInA;
-        public bool isEmptyGO; // True if this is an Empty GameObject (no renderers)
-        public bool isUnderRig; // True if this object is under Rig Root
-    }
-
     [SerializeField] private List<MeshItem> meshItems = new();
     [SerializeField] private string meshSearch = "";
     [SerializeField] private bool showOnlySelectedMeshes = false;
@@ -125,45 +164,6 @@ public class BiperworksPrefabReplace : EditorWindow
     // =========================
     // Step 3: Components (Colliders + Magica*)
     // =========================
-    public enum CompCategory
-    {
-        Transform,
-        Renderer,
-        Collider,
-        Script,
-        Physics,
-        Audio,
-        Light,
-        Other
-    }
-
-
-    public enum CompSource
-    {
-        Mesh,
-        Bone
-    }
-
-    [Serializable]
-    private class CompItem
-    {
-        public bool selected = false;
-        public bool locked = false;
-        public CompCategory category;
-        public CompSource source; // New field for Source Filter
-        public string pathInB; 
-        public string compTypeName;
-        public Component compB;
-
-        public bool isMissingScript;
-
-        public int externalRefCount;
-        public int nullRefCount;
-
-        public string notes;
-        public bool existsInA; // New field for Hide Transferred feature
-    }
-
     [SerializeField] private List<CompItem> compItems = new();
     [SerializeField] private string compSearch = "";
     [SerializeField] private bool showOnlySelectedComps = false;
@@ -557,7 +557,7 @@ public class BiperworksPrefabReplace : EditorWindow
             // Default selection: Start unchecked (user manually selects what to copy)
             bool autoSelect = false;
 
-            boneItems.Add(new BoneItem
+            boneItems.Add(new BonItem
             {
                 selected = autoSelect,
                 isBlacklisted = isBlack,
@@ -606,7 +606,7 @@ public class BiperworksPrefabReplace : EditorWindow
 
     // DrawBoneFilterUI removed and integrated into DrawStep1Bones for island layout
 
-    private bool IsBoneVisible(BoneItem m)
+    private bool IsBoneVisible(BonItem m)
     {
         if (showOnlySelectedBones && !m.selected) return false;
         if (hideBlacklistedBones && m.isBlacklisted) return false;
@@ -2144,5 +2144,6 @@ public class BiperworksPrefabReplace : EditorWindow
         GUI.backgroundColor = color;
         EditorGUILayout.HelpBox(message, MessageType.None);
         GUI.backgroundColor = prevColor;
+    }
     }
 }
