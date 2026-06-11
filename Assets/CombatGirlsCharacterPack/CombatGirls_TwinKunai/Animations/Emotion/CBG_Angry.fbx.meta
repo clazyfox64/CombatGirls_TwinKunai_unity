@@ -59,7 +59,7 @@ ModelImporter:
       events:
       - time: 0
         functionName: SwitchSocket
-        data: 
+        data: To_Put_Socket_R, To_Put_Socket_L
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
