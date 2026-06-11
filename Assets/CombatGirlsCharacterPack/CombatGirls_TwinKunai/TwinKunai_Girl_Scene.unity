@@ -1376,10 +1376,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1822630089, guid: 0c8d572faa184f24b950599d83b3a631, type: 3}
-      propertyPath: serializeData2.initData.localHash
-      value: 101116
-      objectReference: {fileID: 0}
     - target: {fileID: 3515231885917207283, guid: 0c8d572faa184f24b950599d83b3a631, type: 3}
       propertyPath: m_Name
       value: TwinKunai_FullBody
