@@ -1157,10 +1157,17 @@ MonoBehaviour:
     objectToActivate: {fileID: 5425768538291111116}
     objectsToDeactivate:
     - {fileID: 5692046247251376069}
+    - {fileID: 6990797590867089007}
   - button: {fileID: 1623600969796482845}
     objectToActivate: {fileID: 5692046247251376069}
     objectsToDeactivate:
     - {fileID: 5425768538291111116}
+    - {fileID: 6990797590867089007}
+  - button: {fileID: 6990797590867089008}
+    objectToActivate: {fileID: 6990797590867089007}
+    objectsToDeactivate:
+    - {fileID: 5425768538291111116}
+    - {fileID: 5692046247251376069}
 --- !u!114 &2087451363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1176,6 +1183,7 @@ MonoBehaviour:
   buttonParents:
   - {fileID: 6347174616575973250}
   - {fileID: 6748564830584923275}
+  - {fileID: 6990797590867089006}
   ButtonSample: {fileID: 1386006832}
   characters:
   - {fileID: 919132147599950948}
@@ -1206,6 +1214,23 @@ MonoBehaviour:
     - CROUCH IDLE
     - CROUCH WALK
     - CROUCH JOG
+    offObjects: []
+    offObjectsAnimationList: []
+  - groupName: Special
+    buttonParentNumber: 1
+    AnimationList:
+    - SP IDLE
+    - SP SKILL 1
+    - SP SKILL 2
+    - SP SKILL 3
+    - QUICK SHIFT F
+    - QUICK SHIFT B
+    - QUICK SHIFT R
+    - QUICK SHIFT L
+    - TURN_R
+    - TURN_L
+    - SP WALK
+    - SP JOG
     offObjects: []
     offObjectsAnimationList: []
   - groupName: Special
@@ -1351,6 +1376,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1822630089, guid: 0c8d572faa184f24b950599d83b3a631, type: 3}
+      propertyPath: serializeData2.initData.localHash
+      value: 101116
+      objectReference: {fileID: 0}
     - target: {fileID: 3515231885917207283, guid: 0c8d572faa184f24b950599d83b3a631, type: 3}
       propertyPath: m_Name
       value: TwinKunai_FullBody
@@ -1479,6 +1508,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 787316511281036772, guid: dec37358662dfee40b24a8d0f70723ae, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 787316511281036772, guid: dec37358662dfee40b24a8d0f70723ae, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 787316511281036772, guid: dec37358662dfee40b24a8d0f70723ae, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1886208694588510826, guid: dec37358662dfee40b24a8d0f70723ae, type: 3}
       propertyPath: objectGroups.Array.data[0].objectsToToggle.Array.data[0]
       value: 
@@ -1579,6 +1620,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 555220817}
+    - target: {fileID: 6169501912736010784, guid: dec37358662dfee40b24a8d0f70723ae, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169501912736010784, guid: dec37358662dfee40b24a8d0f70723ae, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6173965915046101809, guid: dec37358662dfee40b24a8d0f70723ae, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1657,6 +1706,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dec37358662dfee40b24a8d0f70723ae, type: 3}
+--- !u!224 &6990797590867089006 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1355592565811180277, guid: dec37358662dfee40b24a8d0f70723ae, type: 3}
+  m_PrefabInstance: {fileID: 6990797590867089005}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6990797590867089007 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8246650089744890071, guid: dec37358662dfee40b24a8d0f70723ae, type: 3}
+  m_PrefabInstance: {fileID: 6990797590867089005}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6990797590867089008 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4394702785198753484, guid: dec37358662dfee40b24a8d0f70723ae, type: 3}
+  m_PrefabInstance: {fileID: 6990797590867089005}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7781672841202319027 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6338811180941164580, guid: 0c8d572faa184f24b950599d83b3a631, type: 3}

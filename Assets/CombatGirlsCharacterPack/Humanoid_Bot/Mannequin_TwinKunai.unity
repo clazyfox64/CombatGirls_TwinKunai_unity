@@ -1152,9 +1152,16 @@ MonoBehaviour:
     objectToActivate: {fileID: 5425768538291111116}
     objectsToDeactivate:
     - {fileID: 5692046247251376069}
+    - {fileID: 6990797590867089007}
   - button: {fileID: 1623600969796482845}
     objectToActivate: {fileID: 5692046247251376069}
     objectsToDeactivate:
+    - {fileID: 5425768538291111116}
+    - {fileID: 6990797590867089007}
+  - button: {fileID: 6990797590867089008}
+    objectToActivate: {fileID: 6990797590867089007}
+    objectsToDeactivate:
+    - {fileID: 5692046247251376069}
     - {fileID: 5425768538291111116}
 --- !u!114 &2087451363
 MonoBehaviour:
@@ -1171,6 +1178,7 @@ MonoBehaviour:
   buttonParents:
   - {fileID: 6347174616575973250}
   - {fileID: 6748564830584923275}
+  - {fileID: 6990797590867089006}
   ButtonSample: {fileID: 1386006832}
   characters:
   - {fileID: 919132148062300939}
@@ -1218,6 +1226,18 @@ MonoBehaviour:
     - TURN_L
     - SP WALK
     - SP JOG
+    offObjects: []
+    offObjectsAnimationList: []
+  - groupName: EMOTION
+    buttonParentNumber: 2
+    AnimationList:
+    - ANGRY
+    - DISAPPOINTMENT
+    - GREETING
+    - SAD
+    - SHY
+    - SMILE
+    - SURPRISE
     offObjects: []
     offObjectsAnimationList: []
   buttonSpacing: 50
@@ -1586,6 +1606,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dec37358662dfee40b24a8d0f70723ae, type: 3}
+--- !u!224 &6990797590867089006 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1355592565811180277, guid: dec37358662dfee40b24a8d0f70723ae, type: 3}
+  m_PrefabInstance: {fileID: 6990797590867089005}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6990797590867089007 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8246650089744890071, guid: dec37358662dfee40b24a8d0f70723ae, type: 3}
+  m_PrefabInstance: {fileID: 6990797590867089005}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6990797590867089008 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4394702785198753484, guid: dec37358662dfee40b24a8d0f70723ae, type: 3}
+  m_PrefabInstance: {fileID: 6990797590867089005}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8891333646949717056 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9174142448131611074, guid: 87c6c2226af6fcb4aa456d07e95425b4, type: 3}
