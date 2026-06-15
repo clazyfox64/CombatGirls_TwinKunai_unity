@@ -5660,7 +5660,7 @@ MonoBehaviour:
       - Value: 2
       - Value: 1
       - Value: 2
-      maxConnectionDistance: 0.07217568
+      maxConnectionDistance: 0.072175674
       userEdit: 0
     preBuildData:
       enabled: 0
@@ -7497,6 +7497,7 @@ GameObject:
   - component: {fileID: 3941850705189558255}
   - component: {fileID: 4767596632883215464}
   - component: {fileID: 919132147549830095}
+  - component: {fileID: 841828570575489037}
   m_Layer: 0
   m_Name: TwinKunai_FullBody
   m_TagString: Untagged
@@ -7601,6 +7602,35 @@ MonoBehaviour:
       sourceIndex: 2
     weaponRigidbody: {fileID: 0}
   supportIKSettings: []
+--- !u!114 &841828570575489037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4467453150307159381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3350e8ff206ebd4ab50f7307bc81306, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  headBone: {fileID: 3370010888216175013}
+  faceRenderers:
+  - {fileID: 6385108721666007376}
+  - {fileID: 3801809426779485894}
+  - {fileID: 6807966959228423199}
+  - {fileID: 3074519754550909440}
+  - {fileID: 7521866057805848885}
+  - {fileID: 6391827272277379830}
+  headForwardAxis: 4
+  headRightAxis: 0
+  forceSDFShadow: 1
+  enableSDFShadow: 1
+  forceScriptVectors: 1
+  useSDFShadowProp: _UseSDFShadow
+  useScriptVectorsProp: _UseScriptVectors
+  faceForwardProp: _FaceForward
+  faceRightProp: _FaceRight
 --- !u!1 &4710313023609823081
 GameObject:
   m_ObjectHideFlags: 0
