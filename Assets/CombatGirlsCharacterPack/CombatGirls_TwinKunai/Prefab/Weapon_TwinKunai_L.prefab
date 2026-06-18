@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &384964336476196042
+--- !u!1 &5149972916369990851
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2848691401513901594}
-  - component: {fileID: 1823468676679932860}
-  - component: {fileID: 6593110110749913690}
+  - component: {fileID: 6716478038115515315}
+  - component: {fileID: 3345134127916338035}
+  - component: {fileID: 4580288294824966805}
   m_Layer: 0
-  m_Name: Weapon_Katana_A
+  m_Name: Weapon_TwinDagger_A_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!4 &2848691401513901594
+--- !u!4 &6716478038115515315
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 384964336476196042}
-  m_LocalRotation: {x: 0.97072184, y: 0.162571, z: 0.12226085, w: 0.12775823}
-  m_LocalPosition: {x: -0.058259916, y: 0.014128345, z: 0.019496964}
+  m_GameObject: {fileID: 5149972916369990851}
+  m_LocalRotation: {x: -0.011333245, y: 0.15205574, z: -0.68955624, w: 0.70799917}
+  m_LocalPosition: {x: -0.05249618, y: 0.015803138, z: 0.00146674}
   m_LocalScale: {x: 0.35, y: 0.35, z: 0.423673}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6644999835805029795}
+  m_Father: {fileID: 4658011735640217282}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1823468676679932860
+--- !u!33 &3345134127916338035
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 384964336476196042}
-  m_Mesh: {fileID: -6204376029066178489, guid: 5a434a377f89bec418b7a3f1e7892812, type: 3}
---- !u!23 &6593110110749913690
+  m_GameObject: {fileID: 5149972916369990851}
+  m_Mesh: {fileID: -1489173406596220840, guid: b7a342fb707ad1a40b0aaf6a3534abea, type: 3}
+--- !u!23 &4580288294824966805
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 384964336476196042}
+  m_GameObject: {fileID: 5149972916369990851}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -83,7 +83,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &2321551876494178266
+--- !u!1 &5471667191606660216
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,46 +91,115 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1210337702467422060}
-  - component: {fileID: 4948424435202157024}
-  - component: {fileID: 8561850662700529444}
+  - component: {fileID: 4658011735640217282}
+  - component: {fileID: 5129087070325895467}
   m_Layer: 0
-  m_Name: Weapon_Katana_C
+  m_Name: Weapon_TwinKunai_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1210337702467422060
+--- !u!4 &4658011735640217282
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2321551876494178266}
-  m_LocalRotation: {x: 0.9707217, y: 0.16257127, z: 0.1222606, w: 0.12775882}
-  m_LocalPosition: {x: -0.058259968, y: 0.014128324, z: 0.019496964}
+  m_GameObject: {fileID: 5471667191606660216}
+  m_LocalRotation: {x: 0.9172504, y: 0.38970873, z: 0.04812622, w: 0.06680468}
+  m_LocalPosition: {x: -0.46969983, y: 1.0415407, z: -0.026067555}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6716478038115515315}
+  - {fileID: 3783024372863352898}
+  - {fileID: 36324896846544656}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1773428102 &5129087070325895467
+ParentConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5471667191606660216}
+  m_Enabled: 1
+  m_Weight: 1
+  m_TranslationAtRest: {x: -0.4696997, y: 1.0415407, z: -0.026067555}
+  m_RotationAtRest: {x: 4.8785086, y: 171.90196, z: 133.61649}
+  m_TranslationOffsets:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  m_RotationOffsets:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  m_AffectTranslationX: 1
+  m_AffectTranslationY: 1
+  m_AffectTranslationZ: 1
+  m_AffectRotationX: 1
+  m_AffectRotationY: 1
+  m_AffectRotationZ: 1
+  m_IsContraintActive: 1
+  m_IsLocked: 1
+  m_Sources:
+  - sourceTransform: {fileID: 0}
+    weight: 1
+  - sourceTransform: {fileID: 0}
+    weight: 0
+  - sourceTransform: {fileID: 0}
+    weight: 0
+--- !u!1 &6783652664508923291
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 36324896846544656}
+  - component: {fileID: 4338391252037219831}
+  - component: {fileID: 1991188907470714292}
+  m_Layer: 0
+  m_Name: Weapon_TwinDaggerC_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &36324896846544656
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6783652664508923291}
+  m_LocalRotation: {x: -0.011332827, y: 0.15205522, z: -0.6895563, w: 0.7079992}
+  m_LocalPosition: {x: -0.05249618, y: 0.015803138, z: 0.00146674}
+  m_LocalScale: {x: 1.000001, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6644999835805029795}
+  m_Father: {fileID: 4658011735640217282}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4948424435202157024
+--- !u!33 &4338391252037219831
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2321551876494178266}
-  m_Mesh: {fileID: 4579105467202132289, guid: 5a434a377f89bec418b7a3f1e7892812, type: 3}
---- !u!23 &8561850662700529444
+  m_GameObject: {fileID: 6783652664508923291}
+  m_Mesh: {fileID: -3058982275136498089, guid: b7a342fb707ad1a40b0aaf6a3534abea, type: 3}
+--- !u!23 &1991188907470714292
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2321551876494178266}
+  m_GameObject: {fileID: 6783652664508923291}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -166,7 +235,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &4671367465179405721
+--- !u!1 &8418904379616514803
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -174,46 +243,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8490252752453743883}
-  - component: {fileID: 2335057478717764453}
-  - component: {fileID: 4479058312485532600}
+  - component: {fileID: 3783024372863352898}
+  - component: {fileID: 4059131615014486640}
+  - component: {fileID: 2275766292324786521}
   m_Layer: 0
-  m_Name: Weapon_Katana_B
+  m_Name: Weapon_TwinDagger_B_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!4 &8490252752453743883
+--- !u!4 &3783024372863352898
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4671367465179405721}
-  m_LocalRotation: {x: 0.9707218, y: 0.16257069, z: 0.12226051, w: 0.12775901}
-  m_LocalPosition: {x: -0.0582599, y: 0.014128333, z: 0.019496942}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_GameObject: {fileID: 8418904379616514803}
+  m_LocalRotation: {x: -0.01133318, y: 0.15205565, z: -0.6895563, w: 0.7079991}
+  m_LocalPosition: {x: -0.05249618, y: 0.015803138, z: 0.00146674}
+  m_LocalScale: {x: 0.700001, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6644999835805029795}
+  m_Father: {fileID: 4658011735640217282}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2335057478717764453
+--- !u!33 &4059131615014486640
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4671367465179405721}
-  m_Mesh: {fileID: 5310987646637666612, guid: 5a434a377f89bec418b7a3f1e7892812, type: 3}
---- !u!23 &4479058312485532600
+  m_GameObject: {fileID: 8418904379616514803}
+  m_Mesh: {fileID: 1494861454910206494, guid: b7a342fb707ad1a40b0aaf6a3534abea, type: 3}
+--- !u!23 &2275766292324786521
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4671367465179405721}
+  m_GameObject: {fileID: 8418904379616514803}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -249,72 +318,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &6303940551930564377
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6644999835805029795}
-  - component: {fileID: 2326693210372248979}
-  m_Layer: 0
-  m_Name: Weapon_TwinKunai
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6644999835805029795
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6303940551930564377}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2848691401513901594}
-  - {fileID: 8490252752453743883}
-  - {fileID: 1210337702467422060}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1773428102 &2326693210372248979
-ParentConstraint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6303940551930564377}
-  m_Enabled: 0
-  m_Weight: 1
-  m_TranslationAtRest: {x: 0.47025383, y: 1.0415405, z: -0.026066244}
-  m_RotationAtRest: {x: -4.8785305, y: 8.097881, z: 133.6164}
-  m_TranslationOffsets:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  m_RotationOffsets:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  m_AffectTranslationX: 1
-  m_AffectTranslationY: 1
-  m_AffectTranslationZ: 1
-  m_AffectRotationX: 1
-  m_AffectRotationY: 1
-  m_AffectRotationZ: 1
-  m_IsContraintActive: 1
-  m_IsLocked: 1
-  m_Sources:
-  - sourceTransform: {fileID: 0}
-    weight: 1
-  - sourceTransform: {fileID: 0}
-    weight: 0
-  - sourceTransform: {fileID: 0}
-    weight: 0
