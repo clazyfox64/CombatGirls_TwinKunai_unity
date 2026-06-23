@@ -23,13 +23,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 165569108}
-  m_LocalRotation: {x: 0.25389132, y: 0.89964586, z: 0.07994038, w: -0.34610122}
-  m_LocalPosition: {x: -0.031223996, y: -0.060711235, z: -0.10500641}
+  m_LocalRotation: {x: 0.26524603, y: 0.8973229, z: 0.077047534, w: -0.344267}
+  m_LocalPosition: {x: -0.18536799, y: -0.040782914, z: -0.104313046}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2447175512050193990}
-  m_RootOrder: 3
+  m_Father: {fileID: 3398337721264041142}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &872432436
 GameObject:
@@ -54,13 +54,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 872432436}
-  m_LocalRotation: {x: 0.19656955, y: 0.92003065, z: -0.1083336, w: 0.32119766}
-  m_LocalPosition: {x: -0.02905277, y: -0.060622342, z: 0.10727821}
+  m_LocalRotation: {x: 0.20343557, y: 0.9175252, z: -0.117945775, w: 0.3207029}
+  m_LocalPosition: {x: -0.18282862, y: -0.037848532, z: 0.10794722}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2447175512050193990}
-  m_RootOrder: 2
+  m_Father: {fileID: 3398337721264041142}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &832867597815741
 GameObject:
@@ -1041,6 +1041,8 @@ Transform:
   - {fileID: 1823176438112284797}
   - {fileID: 724212459370316184}
   - {fileID: 3548551912732637076}
+  - {fileID: 872432437}
+  - {fileID: 165569109}
   m_Father: {fileID: 913190689112644731}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2335,7 +2337,7 @@ MonoBehaviour:
   serializeData2:
     initData:
       initVersion: 2
-      localHash: 99538
+      localHash: 101116
       globalHash: -69637262
       clothType: 0
       clothTransformRecord:
@@ -5658,7 +5660,7 @@ MonoBehaviour:
       - Value: 2
       - Value: 1
       - Value: 2
-      maxConnectionDistance: 0.072175674
+      maxConnectionDistance: 0.07217568
       userEdit: 0
     preBuildData:
       enabled: 0
@@ -7582,7 +7584,7 @@ MonoBehaviour:
       eventStringName: To_Put_Socket_R
       sourceIndex: 1
     - name: add_weapon_r
-      eventStringName: To_TK_Weapon_Bone_Dummy_R
+      eventStringName: To_add_weapon_r
       sourceIndex: 2
     weaponRigidbody: {fileID: 0}
   - name: 
@@ -7596,7 +7598,7 @@ MonoBehaviour:
       eventStringName: To_Put_Socket_L
       sourceIndex: 1
     - name: add_weapon_l
-      eventStringName: To_TK_Weapon_Bone_Dummy_L
+      eventStringName: To_add_weapon_l
       sourceIndex: 2
     weaponRigidbody: {fileID: 0}
   supportIKSettings: []
@@ -8349,8 +8351,6 @@ Transform:
   m_Children:
   - {fileID: 7732787388073259561}
   - {fileID: 3548551911506068464}
-  - {fileID: 872432437}
-  - {fileID: 165569109}
   m_Father: {fileID: 2927838473055873692}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -278,8 +278,8 @@ MonoBehaviour:
     - name: Put_Socket_R
       eventStringName: To_Put_Socket_R
       sourceIndex: 1
-    - name: TK_Weapon_Bone_Dummy_R
-      eventStringName: To_TK_Weapon_Bone_Dummy_R
+    - name: add_weapon_r
+      eventStringName: To_add_weapon_r
       sourceIndex: 2
     weaponRigidbody: {fileID: 0}
   - name: 
@@ -292,8 +292,8 @@ MonoBehaviour:
     - name: Put_Socket_L
       eventStringName: To_Put_Socket_L
       sourceIndex: 1
-    - name: TK_Weapon_Bone_Dummy_L
-      eventStringName: To_TK_Weapon_Bone_Dummy_L
+    - name: add_weapon_l
+      eventStringName: To_add_weapon_l
       sourceIndex: 2
     weaponRigidbody: {fileID: 0}
   supportIKSettings: []
@@ -522,13 +522,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1318018973132359812}
-  m_LocalRotation: {x: 0.25389132, y: 0.89964586, z: 0.07994038, w: -0.34610122}
-  m_LocalPosition: {x: -0.031223996, y: -0.060711235, z: -0.10500641}
+  m_LocalRotation: {x: 0.2652461, y: 0.89732295, z: 0.07704753, w: -0.344267}
+  m_LocalPosition: {x: -0.18512492, y: -0.040782914, z: -0.10431303}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1512546626532769178}
-  m_RootOrder: 1
+  m_Father: {fileID: 1883325068771772266}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1493748175249198050
 GameObject:
@@ -776,13 +776,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2731577256287382683}
-  m_LocalRotation: {x: 0.19656955, y: 0.92003065, z: -0.1083336, w: 0.32119766}
-  m_LocalPosition: {x: -0.02905277, y: -0.060622342, z: 0.10727821}
+  m_LocalRotation: {x: 0.20343558, y: 0.9175252, z: -0.117945805, w: 0.32070297}
+  m_LocalPosition: {x: -0.18258555, y: -0.037848532, z: 0.10794722}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1512546626532769178}
-  m_RootOrder: 2
+  m_Father: {fileID: 1883325068771772266}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2760525056938568427
 GameObject:
@@ -945,6 +945,8 @@ Transform:
   - {fileID: 2137659070101684544}
   - {fileID: 3190379508971690913}
   - {fileID: 4541690455516260932}
+  - {fileID: 7010483556941966475}
+  - {fileID: 8474682139946008269}
   m_Father: {fileID: 4154559776740276135}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1895,8 +1897,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6799266818801277429}
-  - {fileID: 7010483556941966475}
-  - {fileID: 8474682139946008269}
   m_Father: {fileID: 2137659070101684544}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2512,7 +2512,7 @@ PrefabInstance:
     - target: {fileID: 5129087070325895467, guid: 676cce924a7adcf4b97993bdaf0cddc6, type: 3}
       propertyPath: m_Sources.Array.data[2].sourceTransform
       value: 
-      objectReference: {fileID: 9047095963856573615}
+      objectReference: {fileID: 8929271121107966653}
     - target: {fileID: 5471667191606660216, guid: 676cce924a7adcf4b97993bdaf0cddc6, type: 3}
       propertyPath: m_Name
       value: Weapon_TwinKunai_L
@@ -2551,7 +2551,7 @@ PrefabInstance:
     - target: {fileID: 8899934741306157424, guid: e9f0b137c7b14b34383b10ec1511bd5e, type: 3}
       propertyPath: m_Sources.Array.data[2].sourceTransform
       value: 
-      objectReference: {fileID: 1213097102538180666}
+      objectReference: {fileID: 4519859421211371238}
     - target: {fileID: 8937483635180884541, guid: e9f0b137c7b14b34383b10ec1511bd5e, type: 3}
       propertyPath: m_RootOrder
       value: 6

@@ -62,14 +62,14 @@ ModelImporter:
       events:
       - time: 0
         functionName: SwitchSocket
-        data: To_Put_Socket_Blade, To_Put_Socket_Sheath
+        data: To_Put_Socket_R, To_Put_Socket_L
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 0.034409743
         functionName: SwitchSocket
-        data: To_TK_Weapon_Bone_Dummy_R, To_TK_Weapon_Bone_Dummy_L
+        data: To_add_weapon_r, To_add_weapon_l
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0

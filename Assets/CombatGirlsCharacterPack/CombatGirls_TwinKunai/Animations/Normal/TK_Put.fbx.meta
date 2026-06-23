@@ -69,7 +69,7 @@ ModelImporter:
         messageOptions: 0
       - time: 0.1672222
         functionName: SwitchSocket
-        data: To_TK_Weapon_Bone_Dummy_R, To_TK_Weapon_Bone_Dummy_L
+        data: To_add_weapon_r, To_add_weapon_l
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
