@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4465791, g: 0.49641412, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657952, g: 0.4964152, b: 0.5748167, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -104,7 +104,7 @@ NavMeshSettings:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    serializedVersion: 2
+    serializedVersion: 3
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
@@ -117,7 +117,7 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    buildHeightMesh: 0
     maxJobWorkers: 0
     preserveTilesOutsideBounds: 0
     debug:
@@ -664,6 +664,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 318626320}
     m_Modifications:
     - target: {fileID: 2659848752442699900, guid: abc357bb5dbfa7747af444e196dc302b, type: 3}
@@ -719,6 +720,9 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abc357bb5dbfa7747af444e196dc302b, type: 3}
 --- !u!4 &1571063451 stripped
 Transform:
@@ -901,6 +905,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 318626320}
     m_Modifications:
     - target: {fileID: 160842925178340736, guid: dfd2f0119800a9c4591b5a7a808b118b, type: 3}
@@ -956,6 +961,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfd2f0119800a9c4591b5a7a808b118b, type: 3}
 --- !u!4 &2051762070 stripped
 Transform:
@@ -999,9 +1007,17 @@ Camera:
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -1257,6 +1273,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 318626320}
     m_Modifications:
     - target: {fileID: 3262669232371234224, guid: f092af054f93b50429e1a6b215dbb2e6, type: 3}
@@ -1308,6 +1325,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f092af054f93b50429e1a6b215dbb2e6, type: 3}
 --- !u!1 &3376580711496459957 stripped
 GameObject:
@@ -1319,6 +1339,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3941850705189558255, guid: 337729ee1b8540d4d80abc1cec909d29, type: 3}
@@ -1370,6 +1391,9 @@ PrefabInstance:
       value: TwinKunai_FullBody
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 337729ee1b8540d4d80abc1cec909d29, type: 3}
 --- !u!1 &3745826582798412274 stripped
 GameObject:
@@ -1467,6 +1491,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 787316511281036772, guid: dec37358662dfee40b24a8d0f70723ae, type: 3}
@@ -1666,6 +1691,9 @@ PrefabInstance:
       value: UI
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dec37358662dfee40b24a8d0f70723ae, type: 3}
 --- !u!224 &6990797590867089006 stripped
 RectTransform:
