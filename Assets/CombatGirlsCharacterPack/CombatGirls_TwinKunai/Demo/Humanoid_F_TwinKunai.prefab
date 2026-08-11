@@ -258,7 +258,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 645190079491876489}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a311682c0fab2f40a18ae4459eee8aa, type: 3}
+  m_Script: {fileID: 11500000, guid: dabaf2f856c5ede49beb8a6f964f4422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animEventFunctionName: SwitchSocket
