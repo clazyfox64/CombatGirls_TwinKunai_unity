@@ -1,0 +1,38 @@
+# Unity generated folders
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# IDE and editor state
+/.vs/
+/.vscode/
+/.idea/
+.consulo/
+.gradle/
+ExportedObj/
+*.csproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.log
+
+# Unity/OS transient files
+sysinfo.txt
+.DS_Store
+Thumbs.db
+crashlytics-build.properties
