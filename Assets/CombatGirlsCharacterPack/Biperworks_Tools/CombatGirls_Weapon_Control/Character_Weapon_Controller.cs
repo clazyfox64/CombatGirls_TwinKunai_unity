@@ -29,7 +29,7 @@ public class RenameAttribute : PropertyAttribute
 }
 
 #if UNITY_EDITOR
-    [CustomPropertyDrawer(typeof(ReadOnlyAttribute))]
+[CustomPropertyDrawer(typeof(ReadOnlyAttribute))]
 public class ReadOnlyDrawer : PropertyDrawer
 {
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
@@ -316,6 +316,21 @@ public class SupportIKConfig
     [HideInInspector] public float targetWeight = 0f;
 }
 
+[System.Serializable]
+public class PropEvent
+{
+    [Tooltip("The GameObject to toggle active/inactive.")]
+    public GameObject targetObject;
+
+    [Rename("Active ON String")]
+    [Tooltip("Animation Event string to activate this prop. Auto-filled if empty.")]
+    public string active_on;
+
+    [Rename("Active OFF String")]
+    [Tooltip("Animation Event string to deactivate this prop. Auto-filled if empty.")]
+    public string active_off;
+}
+
 public class Character_Weapon_Controller : MonoBehaviour
 {
     [ReadOnly]
@@ -339,9 +354,15 @@ public class Character_Weapon_Controller : MonoBehaviour
     [Tooltip("Add multiple Support IK targets (Hands/Feet) for granular IK control via animation events.")]
     public List<SupportIKConfig> supportIKSettings = new List<SupportIKConfig>();
 
+    [Space(10)]
+    [Rename("Prop Active Settings")]
+    [Tooltip("Manage additional props that need to be turned on/off via animation events.")]
+    public List<PropEvent> propEvents = new List<PropEvent>();
+
     // Internal Variables
     private Animator animator;
     private int[] lastStateHashes;
+    private Dictionary<string, GameObject> propObjectMap;
 
     private void Awake()
     {
@@ -356,6 +377,19 @@ public class Character_Weapon_Controller : MonoBehaviour
             }
         }
         
+        // Initialize Prop Map
+        propObjectMap = new Dictionary<string, GameObject>();
+        if (propEvents != null)
+        {
+            foreach (var prop in propEvents)
+            {
+                if (prop.targetObject != null && !propObjectMap.ContainsKey(prop.targetObject.name))
+                {
+                    propObjectMap[prop.targetObject.name] = prop.targetObject;
+                }
+            }
+        }
+
         if (animator != null)
         {
             lastStateHashes = new int[animator.layerCount];
@@ -420,6 +454,26 @@ public class Character_Weapon_Controller : MonoBehaviour
                 {
                     ik.offCommand = "IK_OFF_" + ik.commandID;
                     ik.onCommand = "IK_ON_" + ik.commandID;
+                }
+            }
+        }
+
+        // Auto-generate Prop activation strings only if they are empty
+        if (propEvents != null)
+        {
+            foreach (var prop in propEvents)
+            {
+                if (prop.targetObject != null)
+                {
+                    if (string.IsNullOrEmpty(prop.active_on))
+                        prop.active_on = "Active_on_" + prop.targetObject.name;
+                    if (string.IsNullOrEmpty(prop.active_off))
+                        prop.active_off = "Active_off_" + prop.targetObject.name;
+                }
+                else
+                {
+                    prop.active_on = "";
+                    prop.active_off = "";
                 }
             }
         }
@@ -523,6 +577,59 @@ public class Character_Weapon_Controller : MonoBehaviour
         PerformSocketSwitch(triggerEventName, "ScriptCall");
     }
 
+    // --- New Animation Event Functions ---
+
+    /// <summary>
+    /// Function: Active_on, String: ObjectName or custom string.
+    /// Directly toggles a registered prop to active.
+    /// </summary>
+    public void Active_on(string targetName)
+    {
+        SetPropActive(targetName, true);
+    }
+
+    /// <summary>
+    /// Function: Active_off, String: ObjectName or custom string.
+    /// Directly toggles a registered prop to inactive.
+    /// </summary>
+    public void Active_off(string targetName)
+    {
+        SetPropActive(targetName, false);
+    }
+
+    private void SetPropActive(string targetName, bool active)
+    {
+        // 1. Try to match by custom string defined in propEvents
+        if (propEvents != null)
+        {
+            foreach (var prop in propEvents)
+            {
+                if (prop.targetObject == null) continue;
+
+                // Compare with the strings in the inspector
+                if (active && targetName.Equals(prop.active_on, System.StringComparison.OrdinalIgnoreCase))
+                {
+                    prop.targetObject.SetActive(true);
+                    if (showDebugLog) Debug.Log($"[PropActive] '{targetName}' (Custom ON) matched '{prop.targetObject.name}'");
+                    return;
+                }
+                if (!active && targetName.Equals(prop.active_off, System.StringComparison.OrdinalIgnoreCase))
+                {
+                    prop.targetObject.SetActive(false);
+                    if (showDebugLog) Debug.Log($"[PropActive] '{targetName}' (Custom OFF) matched '{prop.targetObject.name}'");
+                    return;
+                }
+            }
+        }
+
+        // 2. Fallback: match by object name directly (for standard Active_on_ pattern or direct name)
+        if (propObjectMap != null && propObjectMap.TryGetValue(targetName, out GameObject obj))
+        {
+            obj.SetActive(active);
+            if (showDebugLog) Debug.Log($"[PropActive] '{targetName}' -> {(active ? "ON" : "OFF")}");
+        }
+    }
+
     private void PerformSocketSwitch(string triggerEventName, string sourceInfo)
     {
         if (string.IsNullOrEmpty(triggerEventName)) return;
@@ -541,6 +648,39 @@ public class Character_Weapon_Controller : MonoBehaviour
 
     private void ProcessSingleCommand(string cmd, string sourceInfo)
     {
+        // Sub-routine 0a: Match exact custom ON/OFF strings from PropEvents
+        if (propEvents != null)
+        {
+            foreach (var prop in propEvents)
+            {
+                if (prop.targetObject == null) continue;
+
+                if (cmd.Equals(prop.active_on, System.StringComparison.OrdinalIgnoreCase))
+                {
+                    prop.targetObject.SetActive(true);
+                    if (showDebugLog) Debug.Log($"[PropEvent] '{sourceInfo}' matched custom ON: {cmd}");
+                    return;
+                }
+                if (cmd.Equals(prop.active_off, System.StringComparison.OrdinalIgnoreCase))
+                {
+                    prop.targetObject.SetActive(false);
+                    if (showDebugLog) Debug.Log($"[PropEvent] '{sourceInfo}' matched custom OFF: {cmd}");
+                    return;
+                }
+            }
+        }
+
+        // Sub-routine 0b: Fallback pattern recognition for unified SwitchSocket calls (Active_on_/off_)
+        if (cmd.StartsWith("Active_on_"))
+        {
+            Active_on(cmd.Substring(10));
+            return;
+        }
+        if (cmd.StartsWith("Active_off_"))
+        {
+            Active_off(cmd.Substring(11));
+            return;
+        }
 
         // Sub-routine 1: Scan and process multi-target IK activation/deactivation.
         bool isIKCommand = false;
