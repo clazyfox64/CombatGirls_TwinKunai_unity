@@ -466,9 +466,9 @@ SkinnedMeshRenderer:
   - {fileID: 3398337721264041142}
   - {fileID: 2927838473055873692}
   - {fileID: 2447175512050193990}
-  - {fileID: 1731662893107205058}
   - {fileID: 1620834140936270234}
   - {fileID: 4764304991249600307}
+  - {fileID: 1731662893107205058}
   - {fileID: 1823176438112284797}
   - {fileID: 6253031575221084579}
   - {fileID: 2137052319864255071}
@@ -1235,18 +1235,18 @@ SkinnedMeshRenderer:
   - {fileID: 3370010888216175013}
   - {fileID: 724212459370316184}
   - {fileID: 8828021919873308045}
-  - {fileID: 1823176438112284797}
   - {fileID: 6064471239895178980}
+  - {fileID: 1823176438112284797}
   - {fileID: 6253031575221084579}
   - {fileID: 1620834140936270234}
   - {fileID: 4764304991249600307}
-  - {fileID: 2297718642032004898}
   - {fileID: 3082860544786476445}
   - {fileID: 5775620507082962381}
+  - {fileID: 2297718642032004898}
   - {fileID: 9020259075280391548}
-  - {fileID: 7951675279672729648}
   - {fileID: 7286405413886856273}
   - {fileID: 1337731375276784732}
+  - {fileID: 7951675279672729648}
   - {fileID: 1699723452970828798}
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 3398337721264041142}
@@ -2442,9 +2442,9 @@ MonoBehaviour:
         - {fileID: 3398337721264041142}
         - {fileID: 2927838473055873692}
         - {fileID: 2447175512050193990}
-        - {fileID: 1731662893107205058}
         - {fileID: 1620834140936270234}
         - {fileID: 4764304991249600307}
+        - {fileID: 1731662893107205058}
         - {fileID: 1823176438112284797}
         - {fileID: 6253031575221084579}
         - {fileID: 2137052319864255071}
@@ -2491,15 +2491,15 @@ MonoBehaviour:
         - x: 0.00027688924
           y: 1.1394571
           z: 0.019176094
-        - x: -0.069174096
-          y: 1.2735152
-          z: 0.07600566
         - x: -0.123720765
           y: 1.3498312
           z: -0.023708098
         - x: -0.23666085
           y: 1.2483234
           z: -0.028422445
+        - x: -0.069174096
+          y: 1.2735152
+          z: 0.07600566
         - x: -0.078349695
           y: 0.9866207
           z: -0.00000006705522
@@ -2609,11 +2609,6 @@ MonoBehaviour:
             z: 0.5007733
             w: -0.4992262
         - value:
-            x: -0.003837753
-            y: -0.5717183
-            z: -0.00426811
-            w: -0.82043
-        - value:
             x: 0.6745896
             y: 0.27001926
             z: -0.2353617
@@ -2623,6 +2618,11 @@ MonoBehaviour:
             y: 0.27624434
             z: -0.22802319
             w: -0.6271094
+        - value:
+            x: -0.003837753
+            y: -0.5717183
+            z: -0.00426811
+            w: -0.82043
         - value:
             x: -0.49389592
             y: -0.5053439
@@ -2765,15 +2765,15 @@ MonoBehaviour:
         - x: -0.09181205
           y: -0.000079140664
           z: 0.0000000104680655
-        - x: -0.034858704
-          y: 0.05648366
-          z: 0.069451064
         - x: -0.099309005
           y: 0.000000017881392
           z: 0
         - x: -0.15192597
           y: 0.000000030994414
           z: -0.00000022888183
+        - x: -0.034858704
+          y: 0.05648366
+          z: 0.069451064
         - x: 0.00000015258789
           y: 0.00000015178195
           z: 0.078349695
@@ -2883,11 +2883,6 @@ MonoBehaviour:
             z: 0.019445237
             w: 0.99981093
         - value:
-            x: -0.69373167
-            y: 0.6984321
-            z: 0.12487483
-            w: 0.12383609
-        - value:
             x: 0.000000009061009
             y: -0.19655329
             z: 0.024553513
@@ -2897,6 +2892,11 @@ MonoBehaviour:
             y: -0.000000029841598
             z: 0.000000001061393
             w: 0.99963915
+        - value:
+            x: -0.69373167
+            y: 0.6984321
+            z: 0.12487483
+            w: 0.12383609
         - value:
             x: 0.0013130087
             y: 0.9999175
@@ -3039,15 +3039,15 @@ MonoBehaviour:
         - x: 1
           y: 1
           z: 1
-        - x: 1.000001
-          y: 0.99999905
-          z: 1.0000012
         - x: 1.0000007
           y: 0.99999964
           z: 0.99999887
         - x: 1.0000007
           y: 1
           z: 1.0000002
+        - x: 1.000001
+          y: 0.99999905
+          z: 1.0000012
         - x: 1.0000002
           y: 1.0000001
           z: 1.0000002
@@ -7602,6 +7602,7 @@ MonoBehaviour:
       sourceIndex: 2
     weaponRigidbody: {fileID: 0}
   supportIKSettings: []
+  propEvents: []
 --- !u!114 &841828570575489037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9417,7 +9418,6 @@ SkinnedMeshRenderer:
   - {fileID: 1117559311600921952}
   - {fileID: 4873259262996023127}
   - {fileID: 8568312948431000134}
-  - {fileID: 221258745793170539}
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 3398337721264041142}
   m_AABB:
@@ -10349,6 +10349,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 7951675279672729648}
     m_Modifications:
     - target: {fileID: 8593856206217578631, guid: e9f0b137c7b14b34383b10ec1511bd5e, type: 3}
@@ -10412,6 +10413,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9f0b137c7b14b34383b10ec1511bd5e, type: 3}
 --- !u!1773428102 &3548551911751731663 stripped
 ParentConstraint:
@@ -10428,6 +10432,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2297718642032004898}
     m_Modifications:
     - target: {fileID: 4658011735640217282, guid: 676cce924a7adcf4b97993bdaf0cddc6, type: 3}
@@ -10491,6 +10496,9 @@ PrefabInstance:
       value: Weapon_TwinKunai_L
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 676cce924a7adcf4b97993bdaf0cddc6, type: 3}
 --- !u!1773428102 &3548551912551251121 stripped
 ParentConstraint:
